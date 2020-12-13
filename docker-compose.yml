@@ -1,9 +1,5 @@
 version: "3"
 services:
   squid:
-    image: "s-yoshiki/squid"
-    ports:
-      - "3128:3128"
-    volumes:
-      - ./squid-conf:/etc/squid/conf.d
-    command: ["/usr/sbin/squid", "-NYCd 1"]
+    build: .
+    image: "yoshiki1123/squid:latest"

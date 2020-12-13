@@ -7,13 +7,14 @@ Squid on Docker
 ```shell
 git clone https://github.com/s-yoshiki/docker-squid.git
 cd docker-squid
-docker-compose -f docker-compose.build.yml build
+docker-compose  build
 ```
 
 ## Run Docker
 
 ```shell
-docker-compose up -d 
+docker-compose -f docker-compose.tmpl.yml up -d
+curl https://www.google.com -x http://localhost:3128
 ```
 
 ## Files
